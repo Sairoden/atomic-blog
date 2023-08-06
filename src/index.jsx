@@ -3,8 +3,13 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.scss";
 
+// Contexts
+import { PostProvider } from "./contexts/post_context.jsx";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <PostProvider>
+      <App />
+    </PostProvider>
   </React.StrictMode>
 );

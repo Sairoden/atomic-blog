@@ -1,6 +1,12 @@
+// React
 import { useState } from "react";
 
-export default function Archive({ handleAddPost, createRandomPost }) {
+// Contexts
+import { usePostContext } from "../contexts/post_context";
+
+export default function Archive() {
+  const { handleAddPost, createRandomPost } = usePostContext();
+
   const [posts] = useState(() =>
     Array.from({ length: 10000 }, () => createRandomPost())
   );

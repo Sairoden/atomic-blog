@@ -1,7 +1,13 @@
+// Components
 import FormAddPost from "./FormAddPost";
 import Posts from "./Posts";
 
-export default function Main({ posts, handleAddPost }) {
+// Contexts
+import { usePostContext } from "../contexts/post_context";
+
+export default function Main() {
+  const { posts, handleAddPost } = usePostContext();
+
   return (
     <main>
       <FormAddPost handleAddPost={handleAddPost} />

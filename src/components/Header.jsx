@@ -1,12 +1,14 @@
+// Components
 import Results from "./Results";
 import SearchPosts from "./SearchPosts";
 
-export default function Header({
-  posts,
-  handleClearPosts,
-  searchQuery,
-  setSearchQuery,
-}) {
+// Contexts
+import { usePostContext } from "../contexts/post_context";
+
+export default function Header() {
+  const { posts, handleClearPosts, searchQuery, setSearchQuery } =
+    usePostContext();
+
   return (
     <header>
       <h1>
